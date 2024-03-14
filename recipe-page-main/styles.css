@@ -1,0 +1,163 @@
+:root {
+    --main-color: Nutmeg;
+    --main-dark-color: hsl(332, 51%, 32%); 
+    
+    
+    --white: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    
+    
+    --fuente-principal: sans-serif;
+    --color-principal: #000;
+    --tamaño-base: 16px;
+} 
+
+*{
+    margin:0;    
+    box-sizing: border-box;
+} 
+
+html {
+    font-family: var(--fuente-principal);
+    color: var(--color-principal);
+    font-size: var(--tamaño-base);
+}
+h1 {
+    font-family: var(--fuente-principal);
+    color: var(--color-principal);
+    font-size: calc(var(--tamaño-base) * 2); 
+    margin-bottom: 2%;
+}
+body {
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--Eggshell);    
+}
+
+.main-box {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-color:var(--white);
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    padding: 2%;
+    display: block;
+    
+}
+.image-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.image {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 3%;
+    border: 1px solid #160101;
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+   
+}
+.box {
+    margin: 3% 0 3% 0;
+    padding: 2% 0 5% 0;
+    border-bottom: 1px solid var(--Dark-Charcoal)/* Borde inferior */
+}
+.box h2 {
+    padding: 3% 0 2% 0;
+    
+}
+.recipe-button {
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+.button {
+    width: 100px;
+    background-color:var(--Eggshell);
+
+}
+.recipe-name p{
+    line-height: 2em;
+}
+.preparation-time {
+    background-color: var(--Light-Grey);
+    border-bottom: none;
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    padding: 3%;
+    position: sticky;
+}
+/* .instruction {
+
+
+} */
+
+
+.nutrition {
+    border-bottom: none;/* Borde inferior eliminado */
+    line-height: 2em;
+}
+
+
+/*Elementos de las listas*/
+.box li {
+    margin: 2% 0 2% 0;
+    line-height: 1.5em;
+}
+
+
+table {
+    width: 100%;    
+    margin: 3% auto;
+    border-collapse: collapse;   /* Combina los bordes de las celdas ha sido determinante para 
+    que aparezcan las líneas entre las filas*/
+   /*  border-spacing: 0; */  /*Elimina cualquier espacio entre las celdas*/
+    
+  }
+td {
+    padding: 1%;
+}
+
+tr:not(:last-child) {      
+    border-bottom: 1px solid rgb(240, 89, 89);
+}
+
+/* para dispositivos móviles en general  */
+@media  screen and (max-width:800px){
+    body {
+        background-color:var(--Wenge-Brown);        
+    }
+    .recipe-name h1{
+        text-align: center;
+    }
+    .nutrition {
+        text-align: center;
+        line-height: 2em;
+    }
+    .nutrition h2 {
+        text-align: left;
+    }
+
+  }
+
+

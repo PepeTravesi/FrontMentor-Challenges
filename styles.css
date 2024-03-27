@@ -1,0 +1,221 @@
+:root {
+
+    /* PRYMARY COLOR */
+    --light-red: hsl(0, 100%, 67%);
+    --Orange-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    /* background */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    /* circle */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*  Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    /* Use transparency to get the color variations necessary to match the design. Hint: look into using `hsla()`. */
+
+    --fs: 1.1250em;
+
+}
+*, 
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+   
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    /*el conetnedor*/
+    width: 56%;
+    height: 44%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /*elcontenido*/display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.section-result,
+.section-summary {
+    /*  El contenedor */
+    height: 100%;
+    flex:1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.section-result {
+    /* el contenedor */
+    background-image: linear-gradient(var(--Light-royal-blue), var(--Light-slate-blue));
+   
+    /* el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--White);
+}
+.section-result h2 {
+    color: hsla(241, 100%, 89%,.5);
+}
+
+.circle {
+    /*elcontenedor*/width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    /*elcontenido*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.circle h3 {
+    font-size: calc(var(--fs) * 3);
+}
+.circle h4 {
+    color: hsla(241, 100%, 89%,.5);
+}
+.section-result h5 {
+    font-size: calc(var(--fs) * 1.5);
+}
+.section-result p {
+    color: hsla(241, 100%, 89%,.5);
+    text-align: center;
+    margin: 1rem 1rem 2rem 1rem;    
+    padding: 0 1rem 0 1rem;
+}
+
+
+.section-summary {
+    /* El contenedor está hecho */
+    /* el contenido */ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-left: 3rem;   
+}
+
+.reaction,
+.memory,
+.visual,
+.verbal {
+    width:85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;    
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 0.7rem;
+    
+}
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.points {
+    margin-left: 3rem;
+}
+.points span{   
+    font-weight: 700;
+}
+.reaction {
+    background-color: hsla(0, 100%, 67%,.1);
+}
+.reaction .icons  {
+    color: var(--light-red);    
+}
+.memory {
+    background-color: hsla(39, 100%, 56%,.1);
+}
+.memory .icons  {
+    color: var(--Orange-yellow);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%,.1);
+}
+.verbal .icons {
+    color: var(--Green-teal);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%,.1);
+}
+.visual .icons {
+    color: var(--Cobalt-blue);
+}
+
+
+
+
+button {
+    width: 85%;
+    background-color: var(--Cobalt-blue);
+    color: var(--White);
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--Dark-gray-blue);
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4; /* Color de fondo para resaltar el footer */
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+
